@@ -15,7 +15,6 @@ body {
     align-items: center;
     flex-direction: row;
     overflow: hidden;
-    /* padding: 0 20px; */
 }
 
 .navlinks {
@@ -28,25 +27,13 @@ body {
 .navlinks li {
     font-size: 18px;
     color: #E5E7EB;
-    margin-left: 30px
+    margin-left: 30px;
 }
 
 .mainTitle {
     font-size: 24px;
-    color: #F9FAF8
+    color: #F9FAF8;
 }
-
-/* @media (max-width: 1024px) {
-    .headerContainer .navbar {
-        flex-direction: column; 
-    }
-    .navlinks {
-        margin-left: -60px;
-    }
-    .mainTitle {
-        margin-top: 30px;
-    }
-} */
 
 .hero {
     background-color: #1F2937;
@@ -59,8 +46,7 @@ body {
 .text {
     color: #E5E7EB;
     width: 500px;
-    height: 300px;
-    flex-shrink: 1;
+    max-width: 90%; 
     font-size: 18px;
     margin: 15px;
 }
@@ -72,10 +58,12 @@ body {
 }
 
 .titleImage img {
+    max-width: 100%;
     width: 500px;
-    height: 250px;
+    height: auto;
     background-color: #F9FAF8;
     margin: 10px;
+    margin-left: -10px;
 }
 
 .hero button {
@@ -105,7 +93,15 @@ body {
 
 .boxes {
     display: flex;
+    flex-wrap: wrap; /* Allow boxes to wrap */
     gap: 32px;
+    justify-content: center; /* Center boxes horizontally */
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .box {
@@ -114,6 +110,7 @@ body {
     background-color: transparent;
     width: 180px;
     height: 180px;
+    flex: 1 1 auto; /* Allow boxes to shrink and grow as necessary */
 }
 
 .textbox {
@@ -136,7 +133,8 @@ body {
     font-size: 36px;
     font-style: italic;
     color: #1f2937;
-    width: 900px;
+    width: 90%; /* Adjust width for responsiveness */
+    max-width: 900px; /* Limit maximum width */
     text-align: justify;
     padding: 80px;
     display: flex;
